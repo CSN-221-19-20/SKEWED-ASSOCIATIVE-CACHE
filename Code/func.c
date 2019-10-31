@@ -84,3 +84,51 @@ void INITCACHE(int argc, char** argv){
 		NbLines = NbLines * 2;
 	}
 }
+
+void initCACHE(CACHE *cache, int NbLines, int NbBank, void (*Allo) (), int (*Is_In) ()){
+	#ifdef SIML2
+		INITCACHEINT(&(*cache).cacheL2, NbLines, NbBank, Allo, Is_In);
+		INITCACHEINT(&(*cache).cacheinst, 512, 1, AllocateDM, Is_In_CacheDM);
+		INITCACHEINT(&(*cache).cachedata, 512, 1, AllocateDM, Is_In_CacheDM);
+	#else
+		INITCACHEINT(&(*cache).cacheinst, NbLines, NbBank, Allo, Is_In);
+		INITCACHEINT(&(*cache).cachedata, NbLines, NbBank, Allo, Is_In);
+	#endif
+}
+
+void INITCACHEINT(CACHEINT *cache, int NbLines, int NbBank, void (*Allo) (), int (*Is_In) ())
+{
+	int i, t;
+	
+	(*cache).Size = NbLines;
+	(*cache).Number_of_Bank = NbBank;
+	(*cache).Size_Bank = NbLines / NbBank;
+	(*cache).Logbank = 0;
+	t = 1;
+	while (t < (*cache).Size_Bank) {
+		(*cache).Logbank++;
+		t = t * 2;
+	}
+	
+	(*cache).Cache = (unsigned int *) allocation(NbLines + 27);
+	(*cache).Cache_DATE = (int *) allocation(NbLines + 39);
+	(*cache).Cache_Prio = (int *) allocation(2 * NbLines + 67);
+	
+	for (i = 0; i < NbLines; i++) {
+		(*cache).Cache[i] = FreeAddr;
+		(*cache).Cache_DATE[i] = -1;
+		(*cache).Cache_Prio[i] = 0;
+	}
+	(*cache).Allocate = Allo;
+	(*cache).Is_In_Cache = Is_In;
+}
+
+char* allocation(int size){
+	char *pt;
+	pt = malloc(sizeof(int) * size);
+	if (!pt) {
+		fprintf(stderr, "Not enough Memory\n");
+		exit(1);
+	}
+	return (pt);
+}
