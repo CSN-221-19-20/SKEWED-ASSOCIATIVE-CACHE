@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="SKEWED ASSOCIATIVE CACHE" company="CSE, IIT ROORKEE" webLink="https://github.com/CSN-221-19-20/SKEWED-ASSOCIATIVE-CACHE" view-date="2019-09-27" view-index="1" gantt-divider-location="300" resource-divider-location="300" version="2.8.10" locale="en_IN">
+    <description/>
+    <view zooming-state="default:1" id="gantt-chart">
+        <field id="tpd3" name="Name" width="167" order="0"/>
+        <field id="tpd4" name="Begin date" width="65" order="1"/>
+        <field id="tpd5" name="End date" width="64" order="2"/>
+        <option id="color.recent"><![CDATA[#00cccc #00ffcc #33ff33 #99ff00 #ff9900 #ff3300]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars base-id="none">
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="2019" month="10" date="18" type="HOLIDAY"><![CDATA[Thomso]]></date>
+        <date year="2019" month="10" date="19" type="HOLIDAY"/>
+        <date year="2019" month="10" date="20" type="HOLIDAY"/>
+        <date year="2019" month="10" date="24" type="HOLIDAY"><![CDATA[Diwali]]></date>
+        <date year="2019" month="10" date="25" type="HOLIDAY"/>
+        <date year="2019" month="10" date="26" type="HOLIDAY"/>
+        <date year="2019" month="10" date="27" type="HOLIDAY"/>
+        <date year="2019" month="10" date="28" type="HOLIDAY"/>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="9" name="Project Selection" color="#ff3300" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2019-09-29" duration="2" complete="100" thirdDate="2019-09-23" thirdDate-constraint="0" expand="true">
+            <depend id="10" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="10" name="Abstract preparation" color="#ff9900" shape="0,1,0,1,0,0,1,0,0,1,0,1,1,0,0,0" meeting="false" start="2019-10-01" duration="2" complete="100" thirdDate="2019-09-23" thirdDate-constraint="0" expand="true"/>
+        <task id="11" name="Work distribution" color="#99ff00" shape="1,0,0,0,1,0,0,0,1,0,0,0,1,1,1,1" meeting="false" start="2019-10-05" duration="1" complete="100" thirdDate="2019-09-23" thirdDate-constraint="0" expand="true">
+            <depend id="1" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="1" name="Reading Papers" color="#33ff33" shape="1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0" meeting="false" start="2019-10-06" duration="5" complete="90" thirdDate="2019-10-02" thirdDate-constraint="0" expand="true"/>
+        <task id="12" name="Algorithms" color="#00ffcc" shape="1,1,1,0,1,1,0,0,1,0,0,0,0,0,0,0" meeting="false" start="2019-10-11" duration="2" complete="100" thirdDate="2019-09-23" thirdDate-constraint="0" expand="true">
+            <depend id="13" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="13" name="Code Implementation" color="#00cccc" shape="1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0" meeting="false" start="2019-10-13" duration="6" complete="100" thirdDate="2019-09-23" thirdDate-constraint="0" expand="true">
+            <depend id="14" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="14" name="Debugging and Testing" color="#8cb6ce" shape="0,1,1,1,1,0,0,0,1,0,0,0,1,0,0,0" meeting="false" start="2019-10-22" duration="3" complete="100" thirdDate="2019-09-23" thirdDate-constraint="0" expand="true"/>
+        <task id="8" name="Report writing" color="#8cb6ce" meeting="false" start="2019-10-30" duration="1" complete="100" thirdDate="2019-09-29" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Madhukar" function="Default:1" contacts="madhukar@ec.iitr.ac.in" phone="7210566588"/>
+        <resource id="1" name="Lakshay Madaan" function="Default:1" contacts="lmadaan@ec.iitr.ac.in" phone="9911908862"/>
+        <resource id="2" name="Pranav Singhal" function="Default:1" contacts="" phone="8800535785"/>
+        <resource id="3" name="ARDHA RAGHAVENDRA REDDY" function="Default:1" contacts="" phone="8340021561"/>
+        <resource id="4" name="Govind Jain" function="Default:1" contacts="" phone="7374089451"/>
+        <resource id="5" name="SATYA VAMSI GADIKOYILA" function="Default:1" contacts="" phone="9059059251"/>
+        <resource id="6" name="RONIT CHAKRABORTY" function="Default:1" contacts="" phone="7905873982"/>
+    </resources>
+    <allocations>
+        <allocation task-id="1" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="9" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="10" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="11" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="8" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="13" resource-id="0" function="Default:1" responsible="false" load="50.0"/>
+        <allocation task-id="1" resource-id="1" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="9" resource-id="1" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="11" resource-id="1" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="12" resource-id="1" function="Default:1" responsible="false" load="50.0"/>
+        <allocation task-id="1" resource-id="2" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="9" resource-id="2" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="11" resource-id="2" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="8" resource-id="2" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="13" resource-id="2" function="Default:1" responsible="false" load="50.0"/>
+        <allocation task-id="1" resource-id="3" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="10" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="11" resource-id="3" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="12" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="13" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="14" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="8" resource-id="3" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="1" resource-id="4" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="11" resource-id="4" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="12" resource-id="4" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="13" resource-id="4" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="14" resource-id="4" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="1" resource-id="5" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="10" resource-id="5" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="11" resource-id="5" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="12" resource-id="5" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="13" resource-id="5" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="14" resource-id="5" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="8" resource-id="5" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="1" resource-id="6" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="11" resource-id="6" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="12" resource-id="6" function="Default:1" responsible="false" load="30.0"/>
+    </allocations>
+    <vacations>
+        <vacation start="2019-10-18" end="2019-10-21" resourceid="0"/>
+        <vacation start="2019-10-24" end="2019-10-29" resourceid="0"/>
+        <vacation start="2019-10-18" end="2019-10-21" resourceid="1"/>
+        <vacation start="2019-10-24" end="2019-10-29" resourceid="1"/>
+        <vacation start="2019-10-18" end="2019-10-21" resourceid="2"/>
+        <vacation start="2019-10-18" end="2019-10-21" resourceid="3"/>
+        <vacation start="2019-10-24" end="2019-10-29" resourceid="3"/>
+        <vacation start="2019-10-18" end="2019-10-21" resourceid="4"/>
+        <vacation start="2019-10-18" end="2019-10-21" resourceid="5"/>
+        <vacation start="2019-10-18" end="2019-10-21" resourceid="6"/>
+    </vacations>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
