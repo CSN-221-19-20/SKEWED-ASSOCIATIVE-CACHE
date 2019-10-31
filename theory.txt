@@ -1,1 +1,16 @@
+The principle behind skewed caches is to change the mapping function for each set in
+a cache. Blocks that are mapped to one spot in a certain set should not map to the same
+spot in any other set. One example skewing function is a shuffle function with xor. The
+address is split into Tag, A1, A2, Block Offset.
 
+This division is not strict, as A1 can potentially overlap the tag, and A2 can potentially overlap the block. The basic requirement is that A1 ⊕ A2 results in values
+appropriate to address the number of blocks in a bank. For each successive level of the
+cache, the bits of A1 are shuffled as follows[4]:
+bank0: A1⊕A2
+bank1: shuffle(A1)⊕A2
+bank2: shuffle(shuffle(A1))⊕A2
+bank3: shuffle(shuffle(shuffle(A1)))⊕A2
+
+The shuffle function is simply a reordering of the wires. Any skewing function that
+uniquely maps each block in a bank is acceptable; however, using this method to skew
+the mapping function only adds one xor gate to the critical path of indexing into a bank.
